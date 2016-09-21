@@ -47,7 +47,7 @@ class ComputerPaddle(Paddle):
                             c = c0 if b_v[1] < 0 else c1
                             x_int = ComputerPaddle._get_x_intersection(b_pos, b_v, c)
                         y_int = ComputerPaddle._get_y_intersection(b_pos, b_v, k)
-            y_int += Random().randint(-self.get_height() / 2, self.get_height() / 2)
+            y_int += Random().randint(-self.get_height() // 4, self.get_height() // 4)
             self._move_towards(y_int)
             self._y_target = y_int
         if my_pos[1] - self._speed <= self._y_target <= my_pos[1] + self._speed:

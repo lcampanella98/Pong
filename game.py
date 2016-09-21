@@ -7,10 +7,13 @@ import math
 
 class Game:
 
-    def __init__(self):
+    def __init__(self, num_players, width, height):
+
         pygame.init()
-        self._win = (1200, 800)
+        self._win = (width, height)
         self._title = 'Pong'
+
+        self.num_players = num_players
 
         pygame.display.set_caption(self._title)
         pygame.display.set_mode(self._win)
@@ -36,7 +39,7 @@ class Game:
         p2_pos = (self._win[0] - dist_from_edge, paddle_y)
         paddle_dims = (10, 70)
         win_rect = (0, 0) + self._win
-        self._paddle_speed = 8
+        self._paddle_speed = 7
 
         if num_humans == 2:
             self._paddle1 = Paddle(self._surface, 'Player 1',
@@ -157,7 +160,7 @@ class Game:
         return pygame.font.SysFont(self._font_name, size)
 
     def play(self):
-        self._set_game_state(2)
+        self._set_game_state(self.num_players)
         self._game_loop()
         self._quit()
 
