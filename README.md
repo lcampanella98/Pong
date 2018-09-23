@@ -1,7 +1,7 @@
 # Pong
-pong master game
+Old pong game
 
-Game made with pygame in python 3. To execute, run main.py. Set game options in main.py
+Hit ball back and forth with paddles. Player 1 uses "w" and "s" for movement, and Player 2 uses "up" and "down" arrows. You can also play against the computer. 
 
-Description:
-Hit ball back and forth with paddles. Use "w" and "s" if there is a player 1, and "up" and "down" if there is a player 2. 
+Developed with PyGame in python 3. To execute, run main.py. Set game options in main.py
+
